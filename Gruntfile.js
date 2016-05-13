@@ -422,18 +422,6 @@ module.exports = function(grunt) {
 			]
 		},
 		phpunit: {
-			'default': {
-				cmd: 'phpunit',
-				args: ['-c', 'phpunit.xml.dist']
-			},
-			ajax: {
-				cmd: 'phpunit',
-				args: ['-c', 'phpunit.xml.dist', '--group', 'ajax']
-			},
-			multisite: {
-				cmd: 'phpunit',
-				args: ['-c', 'tests/phpunit/multisite.xml']
-			},
 			'external-http': {
 				cmd: 'phpunit',
 				args: ['-c', 'phpunit.xml.dist', '--group', 'external-http']
