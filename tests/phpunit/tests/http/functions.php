@@ -42,6 +42,7 @@ class Tests_HTTP_Functions extends WP_UnitTestCase {
 		$url = 'https://asdftestblog1.files.wordpress.com/2007/09/2007-06-30-dsc_4700-1.jpg';
 
 		$response = wp_remote_get( $url );
+		var_dump( $response );
 		$headers = wp_remote_retrieve_headers( $response );
 
 		// should return the same headers as a head request
