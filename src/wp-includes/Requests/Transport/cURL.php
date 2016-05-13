@@ -447,7 +447,7 @@ class Requests_Transport_cURL implements Requests_Transport {
 	protected function stream_body($handle, $data) {
 		$this->hooks->dispatch('request.progress', array($data, $this->response_bytes, $this->response_byte_limit));
 		$data_length = strlen($data);
-		var_dump(array($data_length, $this->response_byte_limit));
+		var_dump(array($data_length, $this->response_bytes));
 
 		// Are we limiting the response size?
 		if ($this->response_byte_limit) {
