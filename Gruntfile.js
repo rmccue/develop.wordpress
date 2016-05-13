@@ -424,7 +424,7 @@ module.exports = function(grunt) {
 		phpunit: {
 			'external-http': {
 				cmd: 'phpunit',
-				args: ['-c', 'phpunit.xml.dist', '--group', 'external-http']
+				args: ['-c', 'phpunit.xml.dist', '--group', 'external-http', '--filter', 'test_get_request']
 			}
 		},
 		uglify: {
