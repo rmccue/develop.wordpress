@@ -94,6 +94,7 @@ class Requests_Transport_cURL implements Requests_Transport {
 		$this->version = $curl['version_number'];
 		$this->handle = curl_init();
 
+		curl_setopt($this->handle, CURLOPT_VERBOSE, true);
 		curl_setopt($this->handle, CURLOPT_HEADER, false);
 		curl_setopt($this->handle, CURLOPT_RETURNTRANSFER, 1);
 		if ($this->version >= self::CURL_7_10_5) {
