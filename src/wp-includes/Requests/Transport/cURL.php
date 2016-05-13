@@ -361,6 +361,7 @@ class Requests_Transport_cURL implements Requests_Transport {
 		curl_setopt($this->handle, CURLOPT_URL, $url);
 		curl_setopt($this->handle, CURLOPT_REFERER, $url);
 		curl_setopt($this->handle, CURLOPT_USERAGENT, $options['useragent']);
+		$headers[] = 'Connection: close';
 		curl_setopt($this->handle, CURLOPT_HTTPHEADER, $headers);
 
 		if ($options['protocol_version'] === 1.1) {
